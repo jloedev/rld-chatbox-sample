@@ -1,0 +1,33 @@
+
+# Getting Started Guide
+
+Welcome to our software platform. This guide will help you get started quickly.
+
+## First Steps
+
+1. Log in to your account using your credentials
+2. Complete your profile setup
+3. Explore the dashboard to familiarize yourself with the interface
+
+## Dashboard Overview
+
+The dashboard provides a central view of all your activities:
+- Recent activities panel
+- Quick action buttons
+- System notifications
+- Module shortcuts
+
+## Navigation
+
+Use the left sidebar to navigate between different modules:
+- Inventory Management
+- Reporting Suite
+- User Management
+- Settings
+
+## Getting Help
+
+If you need assistance:
+- Click the Help icon in the top right corner
+- Search our knowledge base
+- Contact support via the chat widget

@@ -1,0 +1,37 @@
+
+# Inventory Management Module
+
+The Inventory Management module helps you track and manage your product inventory.
+
+## Adding New Items
+
+To add a new inventory item:
+1. Navigate to Inventory > Add New Item
+2. Fill in the item details (name, SKU, quantity, price)
+3. Upload product images if available
+4. Set reorder thresholds
+5. Click Save
+
+## Viewing Inventory
+
+Access your inventory list:
+- Go to Inventory > View All Items
+- Use filters to narrow down results
+- Sort by different columns (name, quantity, price)
+- Export data to CSV or Excel
+
+## Managing Stock Levels
+
+Monitor and update stock levels:
+- View current stock quantities
+- Set low stock alerts
+- Receive notifications when items need reordering
+- Update quantities after receiving shipments
+
+## Inventory Reports
+
+Generate inventory reports:
+1. Go to Inventory > Reports
+2. Select report type (stock levels, movement, valuation)
+3. Choose date range
+4. Generate and download report

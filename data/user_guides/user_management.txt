@@ -1,0 +1,39 @@
+
+# User Management
+
+Manage user accounts and permissions for your organization.
+
+## Adding Users
+
+To add a new user:
+1. Go to Settings > User Management
+2. Click Add New User
+3. Enter user details (name, email, role)
+4. Set permissions and module access
+5. Send invitation email
+
+## User Roles
+
+Available user roles:
+- Administrator: Full system access
+- Manager: Access to all modules, limited admin functions
+- User: Standard access to assigned modules
+- Viewer: Read-only access
+
+## Managing Permissions
+
+Configure user permissions:
+1. Select user from user list
+2. Click Edit Permissions
+3. Enable or disable module access
+4. Set specific feature permissions
+5. Save changes
+
+## Deactivating Users
+
+To deactivate a user account:
+1. Go to User Management
+2. Find the user
+3. Click Deactivate
+4. Confirm action
+5. User will lose access immediately

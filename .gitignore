@@ -36,15 +36,16 @@ venv.bak/
 .env.*.local
 
 # Data Files
-data/user_guides/*.txt
-data/user_guides/*.pdf
-data/user_guides/*.md
-data/user_guides/*.html
-data/vector_db/
-data/contracts.db
-data/*.db
-data/*.sqlite
-data/*.sqlite3
+# Note: Data folder is included in this sample repository
+# data/user_guides/*.txt
+# data/user_guides/*.pdf
+# data/user_guides/*.md
+# data/user_guides/*.html
+# data/vector_db/
+# data/contracts.db
+# data/*.db
+# data/*.sqlite
+# data/*.sqlite3
 
 # Logs
 *.log
