@@ -1,0 +1,38 @@
+graph TD
+    A[Customer Query] --> B[Chatbot Orchestrator]
+    B --> C[Intent Classifier]
+
+    C --> D{Query Type}
+    D -->|User Guide Question| E[Document RAG System]
+    D -->|Contract Question| F[SQL Query System]
+
+    E --> G[Vector Store<br/>Embeddings]
+    E --> H[Document Chunks<br/>User Guides]
+    G --> I[Similarity Search]
+    H --> I
+    I --> J[Context Retrieval]
+
+    F --> K[SQL Schema Parser]
+    F --> L[Natural Language to SQL]
+    L --> M[Cloud SQL Database<br/>Contract Data]
+    M --> N[Query Results]
+
+    J --> O[LangChain LLM]
+    N --> O
+    C --> O
+
+    O --> P[AI Provider<br/>OpenAI/Anthropic/etc]
+    P --> Q[Generated Response]
+
+    Q --> R[Response Formatter]
+    R --> S[Final Answer to Customer]
+
+    T[Configuration File] -.->|API Keys<br/>Model Settings| P
+    T -.->|DB Connection| M
+    T -.->|Vector DB Settings| G
+
+    style A fill:#e1f5ff
+    style S fill:#c8e6c9
+    style P fill:#fff9c4
+    style T fill:#ffccbc
+    style D fill:#f8bbd0

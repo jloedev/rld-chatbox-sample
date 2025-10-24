@@ -1,0 +1,95 @@
+ai_provider:
+  # Supported providers: openai, anthropic, custom
+  provider: "anthropic"
+
+  openai:
+    api_key: "${OPENAI_API_KEY}"
+    model: "gpt-4-turbo-preview"
+    temperature: 0.7
+    max_tokens: 2000
+
+  anthropic:
+    api_key: "${ANTHROPIC_API_KEY}"
+    model: "claude-3-opus-20240229"
+    temperature: 0.7
+    max_tokens: 2000
+
+vector_store:
+  # Supported: chromadb, faiss
+  type: "chromadb"
+  persist_directory: "./data/vector_db"
+  collection_name: "user_guides"
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  chunk_size: 1000
+  chunk_overlap: 200
+
+sql_database:
+  # Database connection for contract information
+  type: "sqlite"
+  database: "./data/contracts.db"
+
+  # Schema information for natural language to SQL conversion
+  schema_description: |
+    Table: contracts
+      - contract_id (INTEGER, PRIMARY KEY)
+      - customer_name (VARCHAR)
+      - expiration_date (DATE)
+      - pricing (DECIMAL)
+      - status (VARCHAR)
+
+    Table: modules
+      - module_id (INTEGER, PRIMARY KEY)
+      - module_name (VARCHAR)
+      - description (TEXT)
+
+    Table: contract_modules
+      - contract_id (INTEGER, FOREIGN KEY)
+      - module_id (INTEGER, FOREIGN KEY)
+      - purchased_date (DATE)
+
+intent_classification:
+  # Keywords and patterns for routing queries
+  user_guide_keywords:
+    - "how to"
+    - "how do I"
+    - "tutorial"
+    - "guide"
+    - "instructions"
+    - "steps"
+    - "feature"
+    - "use"
+
+  contract_keywords:
+    - "contract"
+    - "expiration"
+    - "expires"
+    - "modules purchased"
+    - "pricing"
+    - "cost"
+    - "price"
+    - "purchase date"
+    - "subscription"
+
+documents:
+  # Directory containing user guide documents
+  user_guides_path: "./data/user_guides"
+  supported_formats:
+    - ".txt"
+    - ".pdf"
+    - ".md"
+    - ".html"
+
+chatbot:
+  # General chatbot settings
+  system_prompt: |
+    You are a helpful customer service assistant for a software company.
+    Your role is to help customers with:
+    1. Questions about how to use the software (reference user guides)
+    2. Questions about their contract details (pricing, modules, expiration dates)
+
+    Always be polite, professional, and provide accurate information.
+    If you cannot find the information needed, let the customer know and
+    offer to escalate to a human agent.
+
+  max_history_length: 10
+  enable_conversation_memory: true
